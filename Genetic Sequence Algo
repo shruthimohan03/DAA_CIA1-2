@@ -1,0 +1,43 @@
+import numpy as np
+
+s1=['A','G','C','A','T','T','C','G','A','T','G','A']
+s2=['A','C','T','A','G','G','C','T','A','C','T','A']
+n=0
+k=0
+l=0
+
+arr = np.zeros([13,13], dtype = int) 
+#fill is f
+def f(arr,j,n):
+    for i in range(len(s1)):
+        if(s1[i]==s2[j]):
+            max=arr[i][j]
+            if(max+2>n): 
+                n=1+max
+                c=i+1
+                d=j+1
+            arr[i+1][j+1]=max+2
+        elif(s1[i]!=s2[j]):
+            max=arr[i][j];
+            if(arr[i][j+1]>max): 
+                max=arr[i][j+1]
+            if(arr[i+1][j]>max): 
+                max=arr[i+1][j]
+            if(max-1>n):
+                n=abs(max-1)
+                c=i+1
+                d=j+1
+            arr[i+1][j+1]=abs(max-1)
+    if(j==len(s1)-1):
+        return c,d
+    else:
+        j+=1
+        return f(arr,j,n)
+
+j=0
+k,l=f(arr,j,n)
+print(arr)
+print("\n")
+
+
+
