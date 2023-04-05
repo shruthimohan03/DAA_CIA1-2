@@ -1,0 +1,4 @@
+OTHER LINKS:
+
+1) https://www.linkedin.com/pulse/introduction-optimization-genetic-algorithm-ahmed-gad/
+2) https://towardsdatascience.com/swarm-intelligence-coding-and-visualising-particle-swarm-optimisation-in-python-253e1bd00772#:~:text=We%20use%20the%20function%3A%20f,the%20value%20becomes%20near%200.&text=We%20apply%20the%20random%20values%20for%20r1%2Cr2%20and%20w.
